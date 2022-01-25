@@ -1,0 +1,39 @@
+This is a project about scraping data from the web about filings. The files include
+8-k, 10-K and 10-Q. The data to be extracted include:
+financial info
+date 
+signed by 
+state
+file number
+its employer identification no
+phone number
+address
+
+1. The first step is to first log into the site daily listings. 
+2. The second is to identify those filings listed above.
+3. Then, after finding those required filings, proceed to its link to extract the financial info 
+and all other info above.
+4. Save the info to a csv.
+
+
+Advanced approach
+This involves data structuring, cleaning and maipulating to ensure that we get the required data.
+Notes:
+1. One company could make two submissions of different filings. Order is static.
+So for every filings, validate it with it's category and date before extracting info from it.
+2. Also, there is /A to the filing categories, which too should be scraped.
+3. Some information about financial stuff of some filings do not exist. Find a way to deal with 
+the issue. Possible solutions: ignore them or write financial info as Null
+4. Find all the similarities between the pages and organize how the web scraper will handle
+and extract data.
+5. List down all the financial data to be obtained which is common in all.
+
+
+Ooooh no! It seems web scraping is usually not that easy like you had imagined especially where
+data is fed to the web page via json
+
+
+https://www.sec.gov/Archives/edgar/data/1108645/000121465921011173/e11212110q2a1.htm - No financial info
+https://www.sec.gov/ix?doc=/Archives/edgar/data/1444192/000117184321007628/f8ka_110521.htm
+https://www.sec.gov/ix?doc=/Archives/edgar/data/1473579/000121390021057071/ea150028-8k_boston.htm
+https://www.sec.gov/ix?doc=/Archives/edgar/data/1281984/000149315221027299/form8-k.htm
